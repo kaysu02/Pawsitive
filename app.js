@@ -32,6 +32,7 @@ if(unlockedStorage !== null){
 }
 else{
     unlockedPets = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    localStorage.setItem("unlockedKey", JSON.stringify(unlockedPets));
 }
 
 // function to load the storage
@@ -122,8 +123,8 @@ function removeItem(event) {
 
 function unlockPet(petNum) //unsure of what type 'pet' is
 {
-    if(coins >= (150 + (petNum * 50))){
-        coins -= 150 + (petNum * 50);
+    if(coins >= (150 + ((petNum-1) * 50))){
+        coins -= 150 + ((petNum-1) * 50);
 
         unlockedPets[petNum-1] = 1;
 
