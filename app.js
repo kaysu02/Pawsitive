@@ -92,11 +92,13 @@ function removeItem(event) {
   // get the HTML id, find the trash in the backend, set trash property in data to true.
   //data[element.id].trash = true;
   console.log(element.id);
+  var ul = document.getElementById("list");
+  var items = ul.getElementsByTagName("li");
   if(data.length > 1){
     data.splice(element.id, 1);
     for(var i = 0; i < data.length; i++){
       data[i].id = i;
-      ul[i].setAttribute("id", i);
+      items[i].setAttribute("id", i);
     }
   }
   else{
