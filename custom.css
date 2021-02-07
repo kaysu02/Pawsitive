@@ -85,5 +85,13 @@ li:hover {
 	text-decoration: line-through;
 }
 
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 
+  .card {
+    display: inline-block;
+  }
+}
   
