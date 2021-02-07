@@ -117,8 +117,35 @@ li:hover {
 	display: inline-block;
 	border-radius: 20px;
 	text-align: center;
-	width: 4px;
-	height: 20px;
+
+  }
+
+  .pic{
+	text-align:center;
+	display: inline-block;
+	background-color: #d3e0dc;
+	border: 20px solid transparent;
+	border-radius: 150px;
+	float: center;
+	margin: 30px;
+	font-family: 'Indie Flower', cursive;
+  }
+
+.pic a{
+	color: #272727;
+	font-size:20px;
+	text-decoration-line: none;
+}
+
+.pic:hover {
+	background-color: rgb(176, 209, 205);
+ }
+
+  .pic .img{
+	float: center;
+	position: relative;
+	display: inline-block;
+	text-align: center;
 
   }
   
