@@ -125,9 +125,11 @@ function unlockPet(petNum) //unsure of what type 'pet' is
 {
     if(coins >= (150 + ((petNum-1) * 50)) && unlockedPets[petNum-1] == 0){
         coins -= 150 + ((petNum-1) * 50);
-
+        document.getElementById("moni").innerHTML = "coins: " + coins;
+        
         unlockedPets[petNum-1] = 1;
 
+        localStorage.setItem("money", coins);
         localStorage.setItem("unlockedKey", JSON.stringify(unlockedPets));
     }
 }
