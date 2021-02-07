@@ -24,9 +24,10 @@ if (moniesStorage != null) {
 }
 
 else {
-    coins = JSON.parse(moniesStorage);
+    coins = moniesStorage;
     document.getElementById("moni").innerHTML = "coins: " + coins;
 }
+
 // function to load the storage
 function loadData(array) {
   array.forEach(function(todo) {
@@ -96,5 +97,5 @@ function removeItem(event) {
 
   // set storage equal to newest changes
   localStorage.setItem("StorageKey", JSON.stringify(data));
-  localStorage.setItem("money", JSON.stringify(coins));
+  localStorage.setItem("money", coins);
 }
