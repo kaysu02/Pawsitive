@@ -167,6 +167,11 @@ function loadBought(petNum)
     var price = 150 + (count * 50);
     var names = document.getElementsByName("price");
     for(var i = 0; i < names.length; i++){
-        names[i].innerHTML = "$" + price;
+        if(unlockedPets[i-1] == 1){
+            names[i].innerHTML = "You already own this pet!";
+        }
+        else{
+            names[i].innerHTML = "$" + price;
+        }
     }
 }
