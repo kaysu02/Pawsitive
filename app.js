@@ -148,11 +148,7 @@ function loadBought(petNum)
 {
     for(var i = 1; i <= 9; i++){
         if(unlockedPets[i-1] == 1){
-<<<<<<< HEAD
-            document.getElementById("item" + i).style.backgroundColor = #d3e0dc;
-=======
             document.getElementById("item" + i).style.backgroundColor = "#d3e0dc";
->>>>>>> main
         }
     }
     var count = 0;
