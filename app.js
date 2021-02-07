@@ -140,8 +140,20 @@ function unlockPet(petNum) //unsure of what type 'pet' is
         unlockedPets[petNum-1] = 1;
 
         document.getElementById("item" + petNum).style.backgroundColor = "lightblue";
-        document.getElementById("price").innerHTML = "$" + price;
+        var names = document.getElementsByName("price");
+        for(var i = 0; i < names.length; i++){
+            names[i].value = "$" + (price + 50);
+        }
         localStorage.setItem("money", coins);
         localStorage.setItem("unlockedKey", JSON.stringify(unlockedPets));
+    }
+}
+
+function loadBought()
+{
+    for(var i = 1; i <= 9; i++){
+        if(unlockedPets[i-1] == 0){
+            document.getElementById("item" + i).style.backgroundColor = "lightblue";
+        }
     }
 }
