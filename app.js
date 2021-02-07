@@ -142,7 +142,7 @@ function unlockPet(petNum) //unsure of what type 'pet' is
         document.getElementById("item" + petNum).style.backgroundColor = "lightblue";
         var names = document.getElementsByName("price");
         for(var i = 0; i < names.length; i++){
-            names[i].value = "$" + (price + 50);
+            names[i].innerHTML = "$" + (price + 50);
         }
         localStorage.setItem("money", coins);
         localStorage.setItem("unlockedKey", JSON.stringify(unlockedPets));
@@ -156,4 +156,8 @@ function loadBought()
             document.getElementById("item" + i).style.backgroundColor = "lightblue";
         }
     }
+    var price = 150 + (count * 50);
+    for(var i = 0; i < names.length; i++){
+            names[i].innerHTML = "$" + (price + 50);
+        }
 }
