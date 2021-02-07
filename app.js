@@ -21,6 +21,7 @@ else {
   id = 0;
   data = [];
   coins = 0;
+  document.getElementById("moni").innerHTML = "coins: " + coins;
 }
 
 // function to load the storage
