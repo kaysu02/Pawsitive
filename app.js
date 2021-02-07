@@ -12,8 +12,6 @@ if (storage !== null) {
   var id = data.length;
 
   var coins = JSON.parse(moniesStorage);
-  if(coins == null)
-    coins = 0;
   document.getElementById("moni").innerHTML = "coins: " + coins;
 }
 
