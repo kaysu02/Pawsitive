@@ -92,10 +92,10 @@ li:hover {
 	text-align:center;
 	display: inline-block;
 	background-color: rgb(176, 209, 205);
-	border: 20px solid transparent;
-	border-radius: 20px;
+	border: 40px solid transparent;
+	border-radius: 30px;
 	float:center;
-	margin: 15px;
+	margin: 30px;
 
 
   }
@@ -107,12 +107,15 @@ li:hover {
 	display: inline-block;
 	border-radius: 20px;
 	text-align: center;
+	width: 4px;
+	height: 20px;
 
   }
   
   #index-gallery{
 	width:465px;
 	border-radius: 20px;
+	
   }
 
   
