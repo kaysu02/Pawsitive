@@ -11,12 +11,14 @@ body {
 } 
 
 .nav .nav-list{
+	text-align: right;
 	font-family: 'Concert One', cursive;
     text-align: right;
     letter-spacing: 3px;
     padding-top: 10px; 
     padding-bottom: 10px;
-    font-size: 1.1em;
+	font-size: 1.1em;
+	padding-right: 0;
     
     /* margin-right: 30px; */
 
