@@ -96,17 +96,13 @@ function removeItem(event) {
     data.splice(element.id, 1);
     for(var i = 0; i < data.length; i++){
       data[i].id = i;
-      event.target.setAttribute("id", i);
     }
+    loadData(data);
   }
   else{
     data = [];
   }
   id = data.length;
-
-  for(var i = 0; i < data.length; i++){
-      data[i].id = i;
-  }
 
   coins += 10;
   document.getElementById("moni").innerHTML = "coins: " + coins;
