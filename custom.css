@@ -12,12 +12,15 @@ h1{
 
 body {
 	text-align: center;
-	
-
 	font-family: 'Concert One', cursive;
 	max-width: auto;
 	margin: 0 auto;
 } 
+
+h2{
+	font-size: 16px;
+	color: rgb(85, 88, 85);
+}
 
 .nav .coins{
 	text-align: left;
@@ -95,9 +98,17 @@ li:hover {
 	border-radius: 30px;
 	float:center;
 	margin: 30px;
-
-
   }
+
+.item a{
+	color: #272727;
+	font-size:20px;
+	text-decoration-line: none;
+}
+
+.item:hover {
+	background-color: #d3e0dc;
+ }
 
   .item .img{
 	float:center;
