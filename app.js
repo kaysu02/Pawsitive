@@ -91,7 +91,6 @@ function removeItem(event) {
   // THIS IS BACKEND BELOW
   // get the HTML id, find the trash in the backend, set trash property in data to true.
   //data[element.id].trash = true;
-  print(element.id);
   if(data.length > 1){
     data.splice(element.id, 1);
     for(var i = 0; i < data.length; i++){
