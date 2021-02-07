@@ -121,6 +121,7 @@ li:hover {
   }
 
   .pic{
+	visibility: hidden;
 	text-align:center;
 	display: inline-block;
 	background-color: #d3e0dc;
@@ -129,7 +130,6 @@ li:hover {
 	float: center;
 	margin: 30px;
 	font-family: 'Indie Flower', cursive;
-	visibility: hidden;
   }
 
 .pic a{
