@@ -31,7 +31,7 @@ else {
 // function to load the storage
 function loadData(array) {
   array.forEach(function(todo) {
-    newItem(todo.name, todo.trash, todo.id);
+    newItem(todo.name, todo.id);
   });
 }
 
@@ -41,11 +41,11 @@ document.body.onkeyup = function(e) {
     // get the text of the input box after the user hits enter
     var todo = document.getElementById("input").value;
     // adding the todo to the front end with our new information
-    newItem(todo, false, id);
+    newItem(todo, id);
     // adding it to the back end
     data.push({
       name: todo,
-      trash: false,
+      //trash: false,
       id: id
     });
     id = data.length;
@@ -55,11 +55,11 @@ document.body.onkeyup = function(e) {
 };
 
 // function that creates the front-end HTML
-function newItem(todo, trash, id) {
+function newItem(todo, id) {
   // if it's in the trash, do absolutely nothing
-  if (trash == true) {
-    return;
-  }
+  //if (trash == true) {
+  //  return;
+  //}
   var ul = document.getElementById("list");
 
   var li = document.createElement("li");
@@ -90,7 +90,9 @@ function removeItem(event) {
 
   // THIS IS BACKEND BELOW
   // get the HTML id, find the trash in the backend, set trash property in data to true.
-  data[element.id].trash = true;
+  //data[element.id].trash = true;
+  data[element.id].remove;
+  id = data.length;
 
   coins += 10;
   document.getElementById("moni").innerHTML = "coins: " + coins;
