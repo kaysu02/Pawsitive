@@ -122,9 +122,11 @@ function removeItem(event) {
 
 function unlockPet(petNum) //unsure of what type 'pet' is
 {
-    coins -= petNum * 50;
+    if(coins >= (150 + (petNum * 50))){
+        coins -= 150 + (petNum * 50);
 
-    unlockedPets[petNum-1] = 1;
+        unlockedPets[petNum-1] = 1;
 
-    localStorage.setItem("unlockedKey", JSON.stringify(unlockedPets));
+        localStorage.setItem("unlockedKey", JSON.stringify(unlockedPets));
+    }
 }
