@@ -91,7 +91,7 @@ function removeItem(event) {
   // THIS IS BACKEND BELOW
   // get the HTML id, find the trash in the backend, set trash property in data to true.
   //data[element.id].trash = true;
-  data[element.id].remove;
+  data[element.id].remove();
   id = data.length;
 
   coins += 10;
