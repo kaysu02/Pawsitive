@@ -12,6 +12,8 @@ h1{
 
 body {
 	text-align: center;
+	
+
 	font-family: 'Concert One', cursive;
 	max-width: auto;
 	margin: 0 auto;
@@ -85,5 +87,31 @@ li:hover {
 	text-decoration: line-through;
 }
 
+.item{
+	/* width:200px; */
+	text-align:center;
+	display: inline-block;
+	background-color: transparent;
+	border: 1px solid transparent;
+
+	float:center;
+
+
+  }
+
+  .item .img{
+	float:center;
+	margin: auto;
+	position: relative;
+	display: inline-block;
+
+
+	text-align: center;
+
+  }
+  
+  #index-gallery{
+	width:465px;
+  }
 
   
