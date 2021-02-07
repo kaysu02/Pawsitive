@@ -4,8 +4,13 @@ html{
 	text-align: center;
 }
 
+h1{
+	letter-spacing: 3px;
+	font-size: 50px;
+	color: rgb(96, 97, 97);
+}
+
 body {
-	background-color: rgb(255, 247, 240);
 	text-align: center;
 	font-family: 'Concert One', cursive;
 	max-width: auto;
@@ -44,14 +49,14 @@ input {
 	padding-top: 30px;
 	width: 600px;
 	height: 60px;
-	font-size: 40px;
+	font-size: 50px;
 	border: 0;
-	color: rgb(57, 118, 121);
+	color: rgb(104, 104, 104);
 	
    }
    input::-webkit-input-placeholder {
-	color: blue; /*Change the placeholder color*/
-	opacity: 0; /*Change the opacity between 0 and 1*/
+	color: rgb(184, 184, 184);
+	opacity: 1; /*Change the opacity between 0 and 1*/
 	background: transparent;
 }
 
