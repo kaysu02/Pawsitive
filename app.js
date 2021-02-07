@@ -1,5 +1,6 @@
 // Use the StorageKey to access the data
 var storage = localStorage.getItem("StorageKey");
+var moniesStorage = localStorage.getItem("money");
 
 //if storage is not empty/if there is something in storage
 if (storage !== null) {
@@ -9,6 +10,8 @@ if (storage !== null) {
   loadData(data);
   //preparing the next todo item's index
   var id = data.length;
+
+  var coins = JSON.parse(moniesStorage);
 }
 
 // if there is nothing in storage
@@ -16,6 +19,7 @@ else {
   // initialize the id to 0 and initialize data
   id = 0;
   data = [];
+  coins = 0;
 }
 
 // function to load the storage
@@ -81,6 +85,9 @@ function removeItem(event) {
   // get the HTML id, find the trash in the backend, set trash property in data to true.
   data[element.id].trash = true;
 
+  coins += 10;
+
   // set storage equal to newest changes
   localStorage.setItem("StorageKey", JSON.stringify(data));
+  localStorage.getItem("money", JSON.stringify(coins));
 }

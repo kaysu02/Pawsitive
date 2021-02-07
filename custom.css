@@ -20,6 +20,14 @@ input:focus {
 	outline:none;
 }
 
+coins {
+	padding-top: 30px;
+	padding-right: 30px;
+	width: 100px;
+	height: 30px;
+	font-size: 14px;
+}
+
 li { 
 	text-align: left;
 	font-size: 40px;
