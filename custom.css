@@ -6,24 +6,30 @@ html{
 
 body {
 	font-family: 'Concert One', cursive;
-	max-width: 500px;
+	max-width: auto;
 	margin: 0 auto;
 } 
 
+.nav .coins{
+	text-align: left;
+}
+
 .nav .nav-list{
-	text-align: right;
+	
+	
 	font-family: 'Concert One', cursive;
-    text-align: right;
+    text-align: center;
     letter-spacing: 3px;
     padding-top: 10px; 
     padding-bottom: 10px;
 	font-size: 1.1em;
-	padding-right: 0;
+	padding-right: 50px;
     
     /* margin-right: 30px; */
 
-  }.nav .nav-list a {
-    /* padding-bottom: 5px; */
+  }.nav .nav-list a, p {
+	/* padding-bottom: 5px; */
+	color: rgb(79, 143, 116);
     text-decoration: none;
     /* border-bottom: 1px solid rgba(155, 169, 236, 0.822);  */
 }
@@ -32,6 +38,7 @@ body {
 
 
 input {
+	text-align: center;
 	font-family: 'Concert One', cursive;
 	letter-spacing: 2px;
 	padding-top: 30px;
