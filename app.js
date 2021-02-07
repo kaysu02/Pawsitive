@@ -174,11 +174,11 @@ function loadBought()
 function loadOwned()
 {
     for(var i = 1; i <= 9; i++){
-        if(unlockedPets[petNum-1] == 1){
-            document.getElementById("pic" + petNum).style.visibility = "visible";
+        if(unlockedPets[i-1] == 1){
+            document.getElementById("pic" + i).style.visibility = "visible";
         }
         else{
-            document.getElementById("pic" + petNum).style.visibility = "hidden";
+            document.getElementById("pic" + i).style.visibility = "hidden";
         }
     }
 }
