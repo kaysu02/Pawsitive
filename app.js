@@ -19,12 +19,12 @@ else {
 }
 
 if (moniesStorage != null) {
-    var coins = moniesStorage;
+    var coins = JSON.parse(moniesStorage);
     document.getElementById("moni").innerHTML = "coins: " + coins;
 }
 
 else {
-    coins = moniesStorage;
+    coins = 0;
     document.getElementById("moni").innerHTML = "coins: " + coins;
 }
 
