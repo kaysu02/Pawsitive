@@ -134,7 +134,7 @@ function unlockPet(petNum)
                 names[i].innerHTML = "You already own this pet!";
             }
             else{
-                names[i].innerHTML = "$" + price;
+                names[i].innerHTML = "$" + (price + 50);
             }
         }
         // set storage equal to newest changes
