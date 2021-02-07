@@ -170,3 +170,13 @@ function loadBought(petNum)
         }
     }
 }
+
+function loadOwned(petNum)
+{
+    if(unlockedPets[petNum-1] == 1){
+        document.getElementById("pic" + petNum).style.visibility = "visible";
+    }
+    else{
+        document.getElementById("pic" + petNum).style.visibility = "hidden";
+    }
+}
