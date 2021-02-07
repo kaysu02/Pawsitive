@@ -12,6 +12,7 @@ if (storage !== null) {
   var id = data.length;
 
   var coins = JSON.parse(moniesStorage);
+  document.getElementById("moni").value = "coins: " + coins;
 }
 
 // if there is nothing in storage
@@ -86,6 +87,7 @@ function removeItem(event) {
   data[element.id].trash = true;
 
   coins += 10;
+  document.getElementById("moni").value = "coins: " + coins;
 
   // set storage equal to newest changes
   localStorage.setItem("StorageKey", JSON.stringify(data));
