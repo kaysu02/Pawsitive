@@ -149,15 +149,22 @@ function unlockPet(petNum) //unsure of what type 'pet' is
     }
 }
 
-function loadBought()
+function loadBought(petNum)
 {
-    for(var i = 1; i <= 9; i++){
-        if(unlockedPets[i-1] == 1){
-            document.getElementById("item" + i).style.backgroundColor = "lightblue";
+    if(unlockedPets[petNum-1] == 1){
+        document.getElementById("item" + petNum).style.backgroundColor = "lightblue";
+    }
+    
+    var count = 0;
+    for(var i = 0; i < unlockedPets.length; i++)
+    {
+        if(unlockedPets[i] == 1)
+        {
+            count++;
         }
     }
+
     var price = 150 + (count * 50);
-    for(var i = 0; i < names.length; i++){
-            names[i].innerHTML = "$" + (price + 50);
-        }
+    var names = document.getElementsByName("price");
+    names[petNum-1].innerHTML = "$" + (price + 50);
 }
