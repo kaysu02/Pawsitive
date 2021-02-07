@@ -65,6 +65,7 @@ function newItem(todo, trash, id) {
 
   // for the li tag, set an attribute named id, set the value equal to id variable
   li.setAttribute("id", id);
+  id = data.length;
 
   ul.appendChild(li);
 
@@ -88,6 +89,7 @@ function removeItem(event) {
   // THIS IS BACKEND BELOW
   // get the HTML id, find the trash in the backend, set trash property in data to true.
   data[element.id].trash = true;
+  id = data.length;
 
   coins += 10;
   document.getElementById("moni").innerHTML = "coins: " + coins;
