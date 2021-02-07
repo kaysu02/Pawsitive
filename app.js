@@ -123,12 +123,22 @@ function removeItem(event) {
 
 function unlockPet(petNum) //unsure of what type 'pet' is
 {
-    if(coins >= (150 + ((petNum-1) * 50)) && unlockedPets[petNum-1] == 0){
-        coins -= 150 + ((petNum-1) * 50);
+    var count = 0;
+    for(var i = 0; i < unlockedPets.length; i++)
+    {
+        if(unlockedPets[i] == 1)
+        {
+            count++;
+        }
+    }
+    var price = 150 + (count * 50);
+    if(coins > price && unlockedPets[petNum-1] == 0){
+        coins -= price;
         document.getElementById("moni").innerHTML = "coins: " + coins;
         
         unlockedPets[petNum-1] = 1;
 
+        document.getElementById("price").value = "$" + price;
         localStorage.setItem("money", coins);
         localStorage.setItem("unlockedKey", JSON.stringify(unlockedPets));
     }
