@@ -139,7 +139,7 @@ function unlockPet(petNum) //unsure of what type 'pet' is
         
         unlockedPets[petNum-1] = 1;
 
-        document.getElementById("item" + petNum).style.backgroundColor = "lightblue";
+        document.getElementById("item" + petNum).style.backgroundColor = #d3e0dc;
         var names = document.getElementsByName("price");
         for(var i = 0; i < names.length; i++){
             if(unlockedPets[i] == 1){
@@ -158,7 +158,7 @@ function loadBought(petNum)
 {
     for(var i = 1; i <= 9; i++){
         if(unlockedPets[i-1] == 1){
-            document.getElementById("item" + i).style.backgroundColor = "lightblue";
+            document.getElementById("item" + i).style.backgroundColor = #d3e0dc;
         }
     }
     var count = 0;
