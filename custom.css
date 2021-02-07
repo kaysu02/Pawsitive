@@ -1,16 +1,39 @@
 html{
-	font-family: "Avenir Next", Helevetica, sans-serif;
+	/* font-family: 'Space Mono', monospace; */
+	
 	text-align: center;
 }
 
 body {
+	font-family: 'Concert One', cursive;
 	max-width: 500px;
 	margin: 0 auto;
 } 
 
+.nav .nav-list{
+	font-family: 'Concert One', cursive;
+    text-align: right;
+    letter-spacing: 3px;
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    font-size: 1.1em;
+    
+    /* margin-right: 30px; */
+
+  }.nav .nav-list a {
+    /* padding-bottom: 5px; */
+    text-decoration: none;
+    /* border-bottom: 1px solid rgba(155, 169, 236, 0.822);  */
+}
+    .nav .nav-list a:hover {
+        color: #a3a3a3 }
+
+
 input {
+	font-family: 'Concert One', cursive;
+	letter-spacing: 2px;
 	padding-top: 30px;
-	width: 500px;
+	width: 600px;
 	height: 60px;
 	font-size: 40px;
 	border: 0;
@@ -38,3 +61,6 @@ li {
 li:hover {
 	text-decoration: line-through;
 }
+
+
+  
