@@ -19,24 +19,14 @@ else {
 }
 
 if (moniesStorage != null) {
-    var coins = JSON.parse(moniesStorage);
+    var coins = moniesStorage;
     document.getElementById("moni").innerHTML = "coins: " + coins;
 }
 
 else {
-    coins = 0;
+    coins = JSON.parse(moniesStorage);
     document.getElementById("moni").innerHTML = "coins: " + coins;
 }
-
-// if there is nothing in storage
-else {
-  // initialize the id to 0 and initialize data
-  id = 0;
-  data = [];
-  coins = 0;
-  document.getElementById("moni").innerHTML = "coins: " + coins;
-}
-
 // function to load the storage
 function loadData(array) {
   array.forEach(function(todo) {
