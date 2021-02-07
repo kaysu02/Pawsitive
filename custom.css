@@ -5,6 +5,8 @@ html{
 }
 
 body {
+	background-color: rgb(255, 247, 240);
+	text-align: center;
 	font-family: 'Concert One', cursive;
 	max-width: auto;
 	margin: 0 auto;
@@ -15,8 +17,6 @@ body {
 }
 
 .nav .nav-list{
-	
-	
 	font-family: 'Concert One', cursive;
     text-align: right;
     letter-spacing: 3px;
@@ -46,10 +46,18 @@ input {
 	height: 60px;
 	font-size: 40px;
 	border: 0;
+	color: rgb(57, 118, 121);
+	
+   }
+   input::-webkit-input-placeholder {
+	color: blue; /*Change the placeholder color*/
+	opacity: 1; /*Change the opacity between 0 and 1*/
+	background: transparent;
 }
 
 input:focus {
 	outline:none;
+
 }
 
 coins {
@@ -61,10 +69,11 @@ coins {
 }
 
 li { 
+	color: rgb(96, 97, 97);
 	text-align: left;
 	font-size: 40px;
 	list-style: none;
-	margin: 0;
+	margin-left: 30px;
 }
 
 li:hover {
