@@ -152,7 +152,7 @@ function unlockPet(petNum) //unsure of what type 'pet' is
 function loadBought()
 {
     for(var i = 1; i <= 9; i++){
-        if(unlockedPets[i-1] == 0){
+        if(unlockedPets[i-1] == 1){
             document.getElementById("item" + i).style.backgroundColor = "lightblue";
         }
     }
