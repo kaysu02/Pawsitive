@@ -10,9 +10,22 @@ if (storage !== null) {
   loadData(data);
   //preparing the next todo item's index
   var id = data.length;
+}
 
-  var coins = JSON.parse(moniesStorage);
-  document.getElementById("moni").innerHTML = "coins: " + coins;
+else {
+  // initialize the id to 0 and initialize data
+  id = 0;
+  data = [];
+}
+
+if (moniesStorage != null) {
+    var coins = JSON.parse(moniesStorage);
+    document.getElementById("moni").innerHTML = "coins: " + coins;
+}
+
+else {
+    coins = 0;
+    document.getElementById("moni").innerHTML = "coins: " + coins;
 }
 
 // if there is nothing in storage
