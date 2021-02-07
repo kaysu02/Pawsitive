@@ -123,7 +123,7 @@ function removeItem(event) {
 
 function unlockPet(petNum) //unsure of what type 'pet' is
 {
-    if(coins >= (150 + ((petNum-1) * 50))){
+    if(coins >= (150 + ((petNum-1) * 50)) && unlockedPets[petNum-1] == 0){
         coins -= 150 + ((petNum-1) * 50);
 
         unlockedPets[petNum-1] = 1;
