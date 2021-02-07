@@ -144,7 +144,7 @@ function unlockPet(petNum)
 }
 
 //upon loading the shop, set the backgrounds and prices to reflect previous purchases
-function loadBought(petNum)
+function loadBought()
 {
     for(var i = 1; i <= 9; i++){
         if(unlockedPets[i-1] == 1){
@@ -171,12 +171,14 @@ function loadBought(petNum)
     }
 }
 
-function loadOwned(petNum)
+function loadOwned()
 {
-    if(unlockedPets[petNum-1] == 1){
-        document.getElementById("pic" + petNum).style.visibility = "visible";
-    }
-    else{
-        document.getElementById("pic" + petNum).style.visibility = "hidden";
+    for(var i = 1; i <= 9; i++){
+        if(unlockedPets[petNum-1] == 1){
+            document.getElementById("pic" + petNum).style.visibility = "visible";
+        }
+        else{
+            document.getElementById("pic" + petNum).style.visibility = "hidden";
+        }
     }
 }
