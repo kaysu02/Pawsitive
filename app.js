@@ -167,6 +167,6 @@ function loadBought(petNum)
     var price = 150 + (count * 50);
     var names = document.getElementsByName("price");
     for(var i = 0; i < names.length; i++){
-        names[i].innerHTML = "$" + (price + 50);
+        names[i].innerHTML = "$" + price;
     }
 }
