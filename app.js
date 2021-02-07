@@ -96,6 +96,7 @@ function removeItem(event) {
     data.splice(element.id, 1);
     for(var i = 0; i < data.length; i++){
       data[i].id = i;
+      data[i].setAttribute("id", id);
     }
   }
   else{
