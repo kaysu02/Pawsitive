@@ -1,6 +1,7 @@
 // Use the StorageKey to access the data
 var storage = localStorage.getItem("StorageKey");
 var moniesStorage = localStorage.getItem("money");
+var unlockedStorage = localStorage.getItem("unlockedKey");
 
 //if storage is not empty/if there is something in storage
 if (storage !== null) {
@@ -11,21 +12,26 @@ if (storage !== null) {
   //preparing the next todo item's index
   var id = data.length;
 }
-
 else {
   // initialize the id to 0 and initialize data
   id = 0;
   data = [];
 }
 
-if (moniesStorage != null) {
+if (moniesStorage !== null) {
     var coins = JSON.parse(moniesStorage);
     document.getElementById("moni").innerHTML = "coins: " + coins;
 }
-
 else {
     coins = 0;
     document.getElementById("moni").innerHTML = "coins: " + coins;
+}
+
+if(unlockedStorage !== null){
+    var unlockedPets = JSON.parse(unlockedStorage);
+}
+else{
+    unlockedPets = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
 
 // function to load the storage
@@ -112,4 +118,13 @@ function removeItem(event) {
   // set storage equal to newest changes
   localStorage.setItem("StorageKey", JSON.stringify(data));
   localStorage.setItem("money", coins);
+}
+
+function unlockPet(petNum) //unsure of what type 'pet' is
+{
+    coins -= petNum * 50;
+
+    unlockedPets[petNum-1] = 1;
+
+    localStorage.setItem("unlockedKey", JSON.stringify(unlockedPets));
 }
