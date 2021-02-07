@@ -11,7 +11,7 @@ if (storage !== null) {
   //preparing the next todo item's index
   var id = data.length;
 
-  var coins = JSON.parse(moniesStorage);
+  var coins = 0;
   document.getElementById("moni").innerHTML = "coins: " + coins;
 }
 
