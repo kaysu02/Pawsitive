@@ -11,7 +11,7 @@ if (storage !== null) {
   //preparing the next todo item's index
   var id = data.length;
 
-  var coins = 0;
+  var coins = moniesStorage;
   document.getElementById("moni").innerHTML = "coins: " + coins;
 }
 
@@ -91,5 +91,5 @@ function removeItem(event) {
 
   // set storage equal to newest changes
   localStorage.setItem("StorageKey", JSON.stringify(data));
-  localStorage.getItem("money", JSON.stringify(coins));
+  localStorage.getItem("money", coins);
 }
