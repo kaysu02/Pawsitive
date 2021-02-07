@@ -142,7 +142,12 @@ function unlockPet(petNum) //unsure of what type 'pet' is
         document.getElementById("item" + petNum).style.backgroundColor = "lightblue";
         var names = document.getElementsByName("price");
         for(var i = 0; i < names.length; i++){
-            names[i].innerHTML = "$" + (price + 50);
+            if(unlockedPets[i] == 1){
+                names[i].innerHTML = "You already own this pet!";
+            }
+            else{
+                names[i].innerHTML = "$" + price;
+            }
         }
         localStorage.setItem("money", coins);
         localStorage.setItem("unlockedKey", JSON.stringify(unlockedPets));
