@@ -131,6 +131,7 @@ function unlockPet(petNum) //unsure of what type 'pet' is
             count++;
         }
     }
+    
     var price = 150 + (count * 50);
     if(coins >= price && unlockedPets[petNum-1] == 0){
         coins -= price;
@@ -138,7 +139,8 @@ function unlockPet(petNum) //unsure of what type 'pet' is
         
         unlockedPets[petNum-1] = 1;
 
-        document.getElementById("price").value = "$" + price;
+        document.getElementById("item" + petNum).style.backgroundColor = "lightblue";
+        document.getElementById("price").innerHTML = "$" + price;
         localStorage.setItem("money", coins);
         localStorage.setItem("unlockedKey", JSON.stringify(unlockedPets));
     }
