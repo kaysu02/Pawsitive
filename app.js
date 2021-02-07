@@ -94,5 +94,5 @@ function removeItem(event) {
 
   // set storage equal to newest changes
   localStorage.setItem("StorageKey", JSON.stringify(data));
-  localStorage.getItem("money", JSON.stringify(coins));
+  localStorage.setItem("money", JSON.stringify(coins));
 }
