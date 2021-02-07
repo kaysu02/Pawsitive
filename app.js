@@ -132,7 +132,7 @@ function unlockPet(petNum) //unsure of what type 'pet' is
         }
     }
     var price = 150 + (count * 50);
-    if(coins > price && unlockedPets[petNum-1] == 0){
+    if(coins >= price && unlockedPets[petNum-1] == 0){
         coins -= price;
         document.getElementById("moni").innerHTML = "coins: " + coins;
         
