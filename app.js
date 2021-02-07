@@ -156,6 +156,7 @@ function loadBought(petNum)
             document.getElementById("item" + i).style.backgroundColor = "lightblue";
         }
     }
+    var count = 0;
     for(var i = 0; i < unlockedPets.length; i++)
     {
         if(unlockedPets[i] == 1)
